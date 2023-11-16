@@ -1,5 +1,7 @@
 import React from "react"
-import memesData from "../memesData"
+import Data from "../memesData"
+
+const memesData = Data
 
 export default function MainBody(){
     const [meme, setMeme] = React.useState({
@@ -8,7 +10,7 @@ export default function MainBody(){
         image: "https://i.imgflip.com/1bij.jpg"
     })
 
-    const [allMemeImages, setAllMemeImages] = React.useState(memesData)
+    const allMemeImages = memesData
 
     function getMemeImage(){
         const memesArray = allMemeImages.data.memes
